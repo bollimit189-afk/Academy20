@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BizCreate Academy - Welcome</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@400;700&family=Moul&family=Poppins:wght@600;800&display=swap" rel="stylesheet">
+    <style>
+        /* កែប្រែ body ឱ្យអាច scroll បានលើទូរសព្ទបើចាំបាច់ */
+        body { 
+            font-family: 'Kantumruy Pro', sans-serif; 
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+        }
+        .moul { font-family: 'Moul', serif; }
+        .poppins { font-family: 'Poppins', sans-serif; }
+
+        .hero-wrapper {
+            background: linear-gradient(-45deg, #0f172a, #1e3a8a, #1e40af, #020617);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            min-height: 100vh; /* ប្រើ min-height ជំនួស height */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            padding: 20px; /* បន្ថែមឃ្លាតជុំវិញសម្រាប់ទូរសព្ទ */
+            box-sizing: border-box;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 2rem;
+            padding: 3rem 1.5rem;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            z-index: 10;
+            max-width: 600px;
+            width: 100%;
+        }
+
+        .typewriter-cursor::after {
+            content: "|";
+            animation: blink 0.7s infinite;
+            color: #60a5fa;
+            margin-left: 5px;
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+
+        .glow-button {
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .glow-button:active {
+            transform: scale(0.95); /* ឱ្យមានអារម្មណ៍ថាចុចលើទូរសព្ទ */
+        }
+
+        .dot {
+            position: absolute;
+            background: white;
+            border-radius: 50%;
+            opacity: 0.3;
+            pointer-events: none; /* កុំឱ្យវាជាប់ស្ទាក់ពេលចុច button */
+            animation: floatUp 20s linear infinite;
+        }
+
+        @keyframes floatUp {
+            from { transform: translateY(100vh) scale(1); opacity: 0.2; }
+            to { transform: translateY(-10vh) scale(1.5); opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="hero-wrapper" id="particles">
+        <div class="glass-card">
+            <h2 class="moul text-yellow-400 text-xl md:text-3xl mb-4 tracking-wider uppercase">
+                Biz Create Academy
+            </h2>
+            
+            <div class="h-1 w-16 bg-gradient-to-r from-blue-600 to-blue-400 mx-auto mb-6 rounded-full"></div>
+            
+            <h1 class="poppins text-white text-3xl sm:text-4xl md:text-5xl font-extrabold mb-6 leading-tight">
+                Team Leader:<br class="block sm:hidden"> <span id="typewriter" class="text-blue-400 typewriter-cursor"></span>
+            </h1>
+            
+            <p class="text-gray-300 text-base md:text-xl mb-10 font-light italic">
+                Created by a proud member of the <br class="block sm:hidden">
+                <span class="text-blue-400 font-bold decoration-wavy">6​th</span> group
+            </p>
+
+            <a href="2index.html" class="glow-button bg-yellow-400 text-blue-950 px-10 py-4 rounded-full font-bold text-lg md:text-xl shadow-xl hover:shadow-yellow-400/20">
+                <span>Enter Website</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        const textElement = document.getElementById('typewriter');
+        const name = "Ing Bol";
+        let index = 0;
+
+        function typeEffect() {
+            if (index < name.length) {
+                textElement.innerHTML += name.charAt(index);
+                index++;
+                setTimeout(typeEffect, 150);
+            }
+        }
+
+        window.onload = typeEffect;
+
+        const particlesContainer = document.getElementById('particles');
+        const particleCount = window.innerWidth < 768 ? 10 : 20; // បន្ថយចំនួនកម្ទេចពន្លឺលើទូរសព្ទដើម្បីកុំឱ្យទាក់ (Lag)
+
+        for (let i = 0; i < particleCount; i++) {
+            const dot = document.createElement('div');
+            dot.className = 'dot';
+            dot.style.left = Math.random() * 100 + '%';
+            dot.style.width = Math.random() * 4 + 2 + 'px';
+            dot.style.height = dot.style.width;
+            dot.style.animationDuration = Math.random() * 10 + 10 + 's';
+            dot.style.animationDelay = Math.random() * 5 + 's';
+            particlesContainer.appendChild(dot);
+        }
+    </script>
+</body>
+</html>

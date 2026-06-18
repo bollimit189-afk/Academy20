@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BizCreate - Login</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@400;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = { darkMode: 'class' }
+        if (localStorage.getItem('theme') === 'dark') document.documentElement.classList.add('dark');
+    </script>
+    <style>
+        body { font-family: 'Kantumruy Pro', sans-serif; }
+    </style>
+</head>
+<body class="bg-slate-100 dark:bg-slate-950 min-h-screen flex items-center justify-center p-4 transition-colors duration-300 relative">
+    
+    <div class="absolute top-4 left-4 right-4 flex justify-between items-center z-10">
+        <a href="index.html" class="flex items-center space-x-2 text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition font-bold text-sm bg-white/50 dark:bg-slate-800/50 px-3 py-2 rounded-full backdrop-blur-md border dark:border-slate-700">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+            </svg>
+            <span>Back</span>
+        </a>
+
+        <button onclick="toggleTheme()" class="p-3 bg-white dark:bg-slate-800 shadow-md rounded-full border dark:border-slate-700 hover:scale-110 transition active:scale-95">
+            <span class="dark:hidden text-lg">🌙</span>
+            <span class="hidden dark:inline text-lg">☀️</span>
+        </button>
+    </div>
+
+    <div class="w-full max-w-md bg-white dark:bg-slate-900 shadow-2xl rounded-[2rem] md:rounded-[2.5rem] overflow-hidden border dark:border-slate-800 mt-12">
+        <div class="bg-[#242d3c] dark:bg-slate-800 p-6 md:p-8 text-white text-center">
+            <div class="w-14 h-14 md:w-16 md:h-16 bg-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-4 border border-blue-400/30">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 md:h-8 md:w-8 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                </svg>
+            </div>
+            <h2 class="text-xl md:text-2xl font-bold px-2">BizCreate Login</h2>
+            <p class="text-gray-400 text-[10px] md:text-sm mt-1 uppercase tracking-widest">Secure Access</p>
+        </div>
+
+        <div class="p-6 md:p-8 space-y-5">
+            <div class="space-y-1.5">
+                <label class="block text-xs md:text-sm font-bold text-gray-700 dark:text-gray-300 ml-1">ឈ្មោះអ្នកប្រើប្រាស់</label>
+                <input type="text" id="username" placeholder="Username" 
+                    class="w-full p-3.5 md:p-4 text-sm border dark:border-slate-700 dark:bg-slate-800 rounded-2xl dark:text-white outline-none focus:ring-2 focus:ring-blue-500 transition shadow-sm">
+            </div>
+            <div class="space-y-1.5">
+                <label class="block text-xs md:text-sm font-bold text-gray-700 dark:text-gray-300 ml-1">លេខសម្ងាត់</label>
+                <input type="password" id="password" placeholder="••••••••" 
+                    class="w-full p-3.5 md:p-4 text-sm border dark:border-slate-700 dark:bg-slate-800 rounded-2xl dark:text-white outline-none focus:ring-2 focus:ring-blue-500 transition shadow-sm">
+            </div>
+            
+            <button onclick="handleLogin()" 
+                class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3.5 md:py-4 rounded-2xl shadow-lg shadow-blue-200 dark:shadow-none transition-transform active:scale-95 text-sm md:text-base mt-2">
+                ចូលប្រព័ន្ធ
+            </button>
+            
+            <div class="text-center pt-2">
+                <p class="text-xs md:text-sm text-gray-500 dark:text-gray-400">មិនទាន់មានគណនី? 
+                    <a href="register.html" class="text-blue-600 font-bold hover:underline">ចុះឈ្មោះនៅទីនេះ</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleTheme() {
+            document.documentElement.classList.toggle('dark');
+            localStorage.setItem('theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
+        }
+
+        async function handleLogin() {
+            const user = document.getElementById('username').value.trim();
+            const pass = document.getElementById('password').value.trim();
+
+            if (!user || !pass) {
+                alert("សូមបំពេញឈ្មោះ និងលេខសម្ងាត់!");
+                return;
+            }
+
+            if (user === "@ingbol" && pass === "1234") {
+                alert("ចូលប្រព័ន្ធជោគជ័យ!");
+                window.location.href = "index.html"; 
+            } else {
+                alert("ឈ្មោះ ឬលេខសម្ងាត់មិនត្រឹមត្រូវ!");
+            }
+        }
+    </script>
+</body>
+</html>

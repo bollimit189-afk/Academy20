@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ក្រុមការងារ - BizCreate Academy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Kantumruy Pro', sans-serif; }
+    </style>
+</head>
+<body class="flex flex-col min-h-screen bg-gray-50">
+
+    <nav class="bg-blue-900 text-white p-4 sticky top-0 z-50 shadow-md">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-xl font-bold font-mono tracking-wider text-yellow-400">BizCreate</h1>
+            
+            <div class="hidden lg:flex items-center space-x-6">
+                <a href="index.html" class="flex items-center gap-2 text-gray-300 hover:text-yellow-400 transition font-medium">
+                    <i class="fa-solid fa-house text-xs"></i> ទំព័រដើម
+                </a>
+                <a href="about.html" class="flex items-center gap-2 text-gray-300 hover:text-yellow-400 transition font-medium">
+                    <i class="fa-solid fa-circle-info text-xs"></i> អំពីយើង
+                </a>
+                <a href="courses.html" class="flex items-center gap-2 text-gray-300 hover:text-yellow-400 transition font-medium">
+                    <i class="fa-solid fa-graduation-cap text-xs"></i> វគ្គសិក្សា
+                </a>
+                <a href="team.html" class="flex items-center gap-2 text-yellow-400 font-medium border-b-2 border-yellow-400 pb-1">
+                    <i class="fa-solid fa-users text-xs"></i> ក្រុមការងារ
+                </a>
+                <a href="lessons.html" class="flex items-center gap-2 text-gray-300 hover:text-yellow-400 transition font-medium">
+                    <i class="fa-solid fa-book-open text-xs"></i> មេរៀន
+                </a>
+                <a href="register.html" class="flex items-center gap-2 bg-yellow-500 text-blue-900 px-6 py-2 rounded-full font-bold hover:bg-yellow-400 transition shadow-lg">
+                    <i class="fa-solid fa-user-plus text-xs"></i> ចុះឈ្មោះសិក្សា
+                </a>
+            </div>
+
+            <button id="menu-btn" class="lg:hidden text-white focus:outline-none">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden lg:hidden flex flex-col space-y-4 px-4 pt-4 pb-6 border-t border-blue-800 mt-4 bg-blue-900">
+            <a href="index.html" class="flex items-center gap-3 text-gray-300 py-1">
+                <i class="fa-solid fa-house w-5 text-center"></i> ទំព័រដើម
+            </a>
+            <a href="about.html" class="flex items-center gap-3 text-gray-300 py-1">
+                <i class="fa-solid fa-circle-info w-5 text-center"></i> អំពីយើង
+            </a>
+            <a href="courses.html" class="flex items-center gap-3 text-gray-300 py-1">
+                <i class="fa-solid fa-graduation-cap w-5 text-center"></i> វគ្គសិក្សា
+            </a>
+            <a href="team.html" class="flex items-center gap-3 text-yellow-400 py-1">
+                <i class="fa-solid fa-users w-5 text-center"></i> ក្រុមការងារ
+            </a>
+            <a href="lessons.html" class="flex items-center gap-3 text-gray-300 py-1">
+                <i class="fa-solid fa-book-open w-5 text-center"></i> មេរៀន
+            </a>
+            <a href="register.html" class="flex items-center justify-center gap-2 bg-yellow-500 text-blue-900 text-center py-2.5 rounded-lg font-bold">
+                <i class="fa-solid fa-user-plus"></i> ចុះឈ្មោះសិក្សា
+            </a>
+        </div>
+    </nav>
+
+    <main class="container mx-auto py-12 md:py-16 px-4 flex-grow text-center">
+        <h2 class="text-2xl md:text-4xl font-bold text-blue-900 mb-2 italic uppercase">ជួបជាមួយក្រុមការងារយើង</h2>
+        <p class="text-gray-500 mb-12 text-sm md:text-base">ពួកយើងគឺជាក្រុមនិស្សិតឆ្នាំទី ២ ដែលមានឆន្ទៈខ្ពស់</p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+            
+            <div class="bg-white p-6 rounded-2xl shadow-lg flex flex-col items-center border border-transparent hover:border-blue-400 transition-all duration-300 hover:-translate-y-2 group">
+                <div class="w-24 h-24 rounded-full border-2 border-blue-400 overflow-hidden mb-4 shadow-md group-hover:scale-105 transition-transform">
+                    <img src="Images/imagebol12.png" alt="Ing Bol" class="w-full h-full object-cover">
+                </div>
+                <h2 class="font-bold text-base uppercase text-gray-800 line-clamp-1">Ing Bol</h2>
+                <p class="text-blue-500 text-xs font-medium mb-3">Leader / Developer</p>
+                <div class="flex space-x-3 mb-5 text-gray-400">
+                    <a href="#" class="hover:text-blue-600 transition text-sm"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" class="hover:text-blue-400 transition text-sm"><i class="fa-brands fa-telegram"></i></a>
+                </div>
+                <a href="lessons.html" class="w-full mt-auto py-2.5 bg-blue-100 text-blue-700 rounded-xl text-xs font-bold hover:bg-blue-600 hover:text-white transition shadow-sm flex items-center justify-center gap-1">
+                    <i class="fa-regular fa-folder-open"></i> មើលមេរៀន
+                </a>
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl shadow-lg flex flex-col items-center border border-transparent hover:border-blue-400 transition-all duration-300 hover:-translate-y-2 group">
+                <div class="w-24 h-24 rounded-full border-2 border-blue-400 overflow-hidden mb-4 shadow-md group-hover:scale-105 transition-transform">
+                    <img src="Images/imagerem12.png" alt="រឿន រ៉េម" class="w-full h-full object-cover">
+                </div>
+                <h2 class="font-bold text-base uppercase text-gray-800 line-clamp-1">រឿន រ៉េម</h2>
+                <p class="text-blue-500 text-xs font-medium mb-3">Front-end Designer</p>
+                <div class="flex space-x-3 mb-5 text-gray-400">
+                    <a href="#" class="hover:text-blue-600 transition text-sm"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" class="hover:text-blue-400 transition text-sm"><i class="fa-brands fa-telegram"></i></a>
+                </div>
+                <a href="lessons.html" class="w-full mt-auto py-2.5 bg-blue-100 text-blue-700 rounded-xl text-xs font-bold hover:bg-blue-600 hover:text-white transition shadow-sm flex items-center justify-center gap-1">
+                    <i class="fa-regular fa-folder-open"></i> មើលមេរៀន
+                </a>
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl shadow-lg flex flex-col items-center border border-transparent hover:border-blue-400 transition-all duration-300 hover:-translate-y-2 group">
+                <div class="w-24 h-24 rounded-full border-2 border-blue-400 overflow-hidden mb-4 shadow-md group-hover:scale-105 transition-transform">
+                    <img src="Images/imagerony12.png" alt="យ៉ា រ៉ូនី" class="w-full h-full object-cover">
+                </div>
+                <h2 class="font-bold text-base uppercase text-gray-800 line-clamp-1">យ៉ា រ៉ូនី</h2>
+                <p class="text-blue-500 text-xs font-medium mb-3">Content Writer</p>
+                <div class="flex space-x-3 mb-5 text-gray-400">
+                    <a href="#" class="hover:text-blue-600 transition text-sm"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" class="hover:text-blue-400 transition text-sm"><i class="fa-brands fa-telegram"></i></a>
+                </div>
+                <a href="lessons.html" class="w-full mt-auto py-2.5 bg-blue-100 text-blue-700 rounded-xl text-xs font-bold hover:bg-blue-600 hover:text-white transition shadow-sm flex items-center justify-center gap-1">
+                    <i class="fa-regular fa-folder-open"></i> មើលមេរៀន
+                </a>
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl shadow-lg flex flex-col items-center border border-transparent hover:border-blue-400 transition-all duration-300 hover:-translate-y-2 group">
+                <div class="w-24 h-24 rounded-full border-2 border-blue-400 overflow-hidden mb-4 shadow-md group-hover:scale-105 transition-transform">
+                    <img src="Images/imagerothtanak12.png" alt="កាន ច័ន្ទរតនៈ" class="w-full h-full object-cover">
+                </div>
+                <h2 class="font-bold text-base uppercase text-gray-800 line-clamp-1">កាន ច័ន្ទរតនៈ</h2>
+                <p class="text-blue-500 text-xs font-medium mb-3">UX/UI Design</p>
+                <div class="flex space-x-3 mb-5 text-gray-400">
+                    <a href="#" class="hover:text-blue-600 transition text-sm"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" class="hover:text-blue-400 transition text-sm"><i class="fa-brands fa-telegram"></i></a>
+                </div>
+                <a href="lessons.html" class="w-full mt-auto py-2.5 bg-blue-100 text-blue-700 rounded-xl text-xs font-bold hover:bg-blue-600 hover:text-white transition shadow-sm flex items-center justify-center gap-1">
+                    <i class="fa-regular fa-folder-open"></i> មើលមេរៀន
+                </a>
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl shadow-lg flex flex-col items-center border border-transparent hover:border-blue-400 transition-all duration-300 hover:-translate-y-2 group">
+                <div class="w-24 h-24 rounded-full border-2 border-blue-400 overflow-hidden mb-4 shadow-md group-hover:scale-105 transition-transform">
+                    <img src="Images/imagekontha12.png" alt="ម៉ម គឹមសុគន្ធា" class="w-full h-full object-cover">
+                </div>
+                <h2 class="font-bold text-base uppercase text-gray-800 line-clamp-1">ម៉ម គឹមសុគន្ធា</h2>
+                <p class="text-blue-500 text-xs font-medium mb-3">Poster Designer</p>
+                <div class="flex space-x-3 mb-5 text-gray-400">
+                    <a href="#" class="hover:text-blue-600 transition text-sm"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" class="hover:text-blue-400 transition text-sm"><i class="fa-brands fa-telegram"></i></a>
+                </div>
+                <a href="lessons.html" class="w-full mt-auto py-2.5 bg-blue-100 text-blue-700 rounded-xl text-xs font-bold hover:bg-blue-600 hover:text-white transition shadow-sm flex items-center justify-center gap-1">
+                    <i class="fa-regular fa-folder-open"></i> មើលមេរៀន
+                </a>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="bg-blue-900 text-white py-10 text-center mt-auto border-t border-blue-800">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="text-center md:text-left">
+                <p class="font-bold text-yellow-400 text-lg">BizCreate Academy</p>
+                <p class="text-xs opacity-70 mt-1">© 2026 រក្សាសិទ្ធិដោយក្រុមទី ៦ - និស្សិតព័ត៌មានវិទ្យា</p>
+            </div>
+            <div class="flex space-x-4 text-xl">
+                <a href="https://www.facebook.com/share/14chk8qKRhc/?mibextid=wwXIfr" class="text-gray-400 hover:text-white transition"><i class="fa-brands fa-facebook"></i></a>
+                <a href="@ACE_bol" class="text-gray-400 hover:text-white transition"><i class="fa-brands fa-telegram"></i></a>
+                <a href="https://www.youtube.com/embed/zJWpypu5TU0?si=LCo_ciGW4nIMJDx-" class="text-gray-400 hover:text-white transition"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const btn = document.getElementById('menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        const icon = document.getElementById('menu-icon');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+            if (menu.classList.contains('hidden')) {
+                icon.setAttribute('d', 'M4 6h16M4 12h16m-7 6h7');
+            } else {
+                icon.setAttribute('d', 'M6 18L18 6M6 6l12 12');
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>លម្អិតវគ្គសិក្សា - BizCreate Academy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- បន្ថែម Font Awesome CDN លីង -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Kantumruy Pro', sans-serif; }
+    </style>
+</head>
+<body class="bg-gray-50 flex flex-col min-h-screen text-gray-900">
+
+    <!-- NAVIGATION BAR -->
+    <nav class="bg-blue-900 text-white p-4 sticky top-0 z-50 shadow-md">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-xl font-bold font-mono tracking-wider text-yellow-400">BizCreate</h1>
+            
+            <!-- ម៉ឺនុយសម្រាប់ Desktop -->
+            <div class="hidden lg:flex items-center space-x-6">
+                <a href="index.html" class="flex items-center gap-2 text-gray-300 hover:text-yellow-400 transition font-medium">
+                    <i class="fa-solid fa-house text-xs"></i> ទំព័រដើម
+                </a>
+                <a href="about.html" class="flex items-center gap-2 text-gray-300 hover:text-yellow-400 transition font-medium">
+                    <i class="fa-solid fa-circle-info text-xs"></i> អំពីយើង
+                </a>
+                <a href="courses.html" class="flex items-center gap-2 text-yellow-400 font-medium border-b-2 border-yellow-400 pb-1">
+                    <i class="fa-solid fa-graduation-cap text-xs"></i> វគ្គសិក្សា
+                </a>
+                <a href="team.html" class="flex items-center gap-2 text-gray-300 hover:text-yellow-400 transition font-medium">
+                    <i class="fa-solid fa-users text-xs"></i> ក្រុមការងារ
+                </a>
+                <a href="lessons.html" class="flex items-center gap-2 text-gray-300 hover:text-yellow-400 transition font-medium">
+                    <i class="fa-solid fa-book-open text-xs"></i> មេរៀន
+                </a>
+                <a href="register.html" class="flex items-center gap-2 bg-yellow-500 text-blue-900 px-6 py-2 rounded-full font-bold hover:bg-yellow-400 transition shadow-lg">
+                    <i class="fa-solid fa-user-plus text-xs"></i> ចុះឈ្មោះសិក្សា
+                </a>
+            </div>
+            
+            <!-- ប៊ូតុងម៉ឺនុយសម្រាប់ Mobile -->
+            <button id="detail-menu-btn" class="lg:hidden text-white focus:outline-none">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path id="detail-menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- ម៉ឺនុយសម្រាប់ Mobile -->
+        <div id="detail-mobile-menu" class="hidden lg:hidden flex flex-col space-y-4 px-4 pt-4 pb-6 border-t border-blue-800 mt-4 bg-blue-900">
+            <a href="index.html" class="flex items-center gap-3 text-gray-300 py-1">
+                <i class="fa-solid fa-house w-5 text-center"></i> ទំព័រដើម
+            </a>
+            <a href="about.html" class="flex items-center gap-3 text-gray-300 py-1">
+                <i class="fa-solid fa-circle-info w-5 text-center"></i> អំពីយើង
+            </a>
+            <a href="courses.html" class="flex items-center gap-3 text-yellow-400 py-1">
+                <i class="fa-solid fa-graduation-cap w-5 text-center"></i> វគ្គសិក្សា
+            </a>
+            <a href="team.html" class="flex items-center gap-3 text-gray-300 py-1">
+                <i class="fa-solid fa-users w-5 text-center"></i> ក្រុមការងារ
+            </a>
+            <a href="lessons.html" class="flex items-center gap-3 text-gray-300 py-1">
+                <i class="fa-solid fa-book-open w-5 text-center"></i> មេរៀន
+            </a>
+            <a href="register.html" class="flex items-center justify-center gap-2 bg-yellow-500 text-blue-900 text-center py-2.5 rounded-lg font-bold">
+                <i class="fa-solid fa-user-plus"></i> ចុះឈ្មោះសិក្សា
+            </a>
+        </div>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <main class="container mx-auto py-10 px-4 flex-grow max-w-6xl">
+        
+        <a href="courses.html" class="inline-flex items-center text-sm font-medium text-blue-900 hover:text-blue-600 mb-6 transition">
+            <i class="fa-solid fa-arrow-left mr-2"></i> ត្រឡប់ទៅវគ្គសិក្សាទាំងអស់
+        </a>
+
+        <div class="bg-white rounded-2xl p-6 md:p-8 border border-gray-200 shadow-sm flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">
+            <div>
+                <span id="course-tag" class="text-xs font-bold px-3 py-1 rounded-md uppercase">Category</span>
+                <h2 id="course-title" class="text-2xl md:text-3xl font-bold text-blue-900 mt-2">កំពុងផ្ទុកទិន្នន័យ...</h2>
+                <p class="text-gray-500 text-sm mt-1">ប្រមូលផ្តុំទៅដោយឯកសារមេរៀន ស្លាយ PPT និងវីដេអូអនុវត្តជាក់ស្តែង</p>
+            </div>
+            <a href="register.html" class="w-full md:w-auto bg-blue-600 text-white text-center font-bold px-6 py-3 rounded-xl hover:bg-blue-700 transition shadow-md flex items-center justify-center gap-2">
+                <i class="fa-solid fa-user-plus"></i> ចុះឈ្មោះចូលរៀនថ្នាក់ផ្ទាល់
+            </a>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            
+            <!-- បញ្ជីមេរៀន -->
+            <div class="lg:col-span-2 space-y-4">
+                <h3 class="text-lg font-bold text-gray-800 mb-2"><i class="fa-solid fa-book-open text-blue-600 mr-2"></i>មាតិកាមេរៀន និងឯកសារទាញយក</h3>
+                
+                <div id="lessons-list" class="space-y-4"></div>
+            </div>
+
+            <!-- ប្រអប់វីដេអូ -->
+            <div class="space-y-4">
+                <h3 class="text-lg font-bold text-gray-800 mb-2"><i class="fa-solid fa-video text-red-500 mr-2"></i>វីដេអូកំពុងចាក់មើល</h3>
+                <div class="bg-white rounded-2xl p-4 border border-gray-200 shadow-sm sticky top-24">
+                    <div class="aspect-video bg-black rounded-xl overflow-hidden mb-4">
+                        <iframe id="video-player" class="w-full h-full" src="" title="Course Lesson" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <h4 class="font-bold text-sm text-gray-800">ចំណាំ៖</h4>
+                    <p class="text-xs text-gray-500 mt-1 leading-relaxed">សូមចុចលើប៊ូតុង <span class="text-blue-600 font-semibold">« មើលវីដេអូ »</span> នៅផ្នែកខាងឆ្វេង ដើម្បីផ្លាស់ប្តូរវីដេអូទៅតាមមេរៀននីមួយៗ និងចុចប៊ូតុង <span class="text-gray-700 font-semibold">« ទាញយក »</span> ដើម្បីទាញយកស្លាយមេរៀន។</p>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- FOOTER (កែសម្រួលរចនាបថឱ្យស្អាតដូចទំព័រមុនៗ) -->
+    <footer class="bg-blue-900 text-white py-10 text-center mt-auto border-t border-blue-800">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="text-center md:text-left">
+                <p class="font-bold text-yellow-400 text-lg">BizCreate Academy</p>
+                <p class="text-xs opacity-70 mt-1">© 2026 រក្សាសិទ្ធិដោយក្រុមទី ៦ - និស្សិតព័ត៌មានវិទ្យា</p>
+            </div>
+            <div class="flex space-x-4 text-xl">
+                <a href="https://www.facebook.com/share/14chk8qKRhc/?mibextid=wwXIfr" class="text-gray-400 hover:text-white transition" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://t.me/ingbol55" class="text-gray-400 hover:text-white transition" target="_blank"><i class="fa-brands fa-telegram"></i></a>
+                <a href="https://www.youtube.com/embed/zJWpypu5TU0?si=LCo_ciGW4nIMJDx-" class="text-gray-400 hover:text-white transition" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        // ១. ឃ្លាំងផ្ទុកទិន្នន័យមេរៀន និងលីងឯកសារដោនឡូត
+        const coursesDatabase = {
+            leader: {
+                title: "វគ្គសិក្សា៖ Leader / Developer (Full-Stack)",
+                tag: "Technical Lead",
+                colorClass: "bg-red-50 text-red-600",
+                lessons: [
+                    { title: "មេរៀនទី ១៖ មូលដ្ឋានគ្រឹះ និងរចនាសម្ព័ន្ធ Full-Stack", info: "រយៈពេល៖ ៤៥ នាទី | Slide PPT", video: "https://www.youtube.com/embed/YLpCPo0FDtE?si=pkD9rOL_3cJWuWA8", file: "documents/leader-lesson1.pdf" },
+                    { title: "មេរៀនទី ២៖ ការបង្កើត API ជាមួយ NodeJS & Express", info: "រយៈពេល៖ ១ ម៉ោង ២០ នាទី | Source Code", video: "https://www.youtube.com/embed/hly-11ZcH2s?si=DEzKScYkdxeG-5ik", file: "documents/leader-lesson2.zip" },
+                    { title: "មេរៀនទី ៣៖ ការភ្ជាប់ Database MongoDB និងការគ្រប់គ្រងទិន្នន័យ", info: "រយៈពេល៖ ៥០ នាទី | ឯកសារសង្ខេប", video: "https://www.youtube.com/embed/EQ4tUVK9yMs?si=YAWp3vyX7HrZgRcy", file: "documents/leader-lesson3.pdf" }
+                ]
+            },
+            frontend: {
+                title: "វគ្គសិក្សា៖ Front-end Designer",
+                tag: "Web Design",
+                colorClass: "bg-blue-50 text-blue-600",
+                lessons: [
+                    { title: "មេរៀនទី ១៖ មូលដ្ឋានគ្រឹះ HTML5 និងការរៀបចំរចនាសម្ព័ន្ធប្លង់វេប", info: "រយៈពេល៖ 2:56 នាទី | Slide PPT", video: "https://www.youtube.com/embed/5gydoJuvkvE?si=9-jKqntaY12It_A3", file: "documents/frontend-lesson1.pdf" },
+                    { title: "មេរៀនទី ២៖ ការដេគ័រម៉ូតស្ទីលគេហទំព័រឱ្យទាក់ទាញជាមួយ CSS3", info: "រយៈពេល៖ ៥០ នាទី | កូដគំរូ", video: "https://www.youtube.com/embed/RMrsBA2T-dQ?si=b0eJ9ggfthVus-_m", file: "documents/frontend-lesson2.zip" },
+                    { title: "មេរៀនទី ៣៖ ការបង្កើត Responsive Layout ជាមួយ Tailwind CSS", info: "រយៈពេល៖ ១ ម៉ោង | ឯកសារជំនួយ", video: "https://www.youtube.com/embed/PuovsjZN11Y?si=mmSTFTSNgyzztJid", file: "documents/frontend-lesson3.pdf" }
+                ]
+            },
+            writer: {
+                title: "វគ្គសិក្សា៖ Content Writer",
+                tag: "Marketing",
+                colorClass: "bg-purple-50 text-purple-600",
+                lessons: [
+                    { title: "មេរៀនទី ១៖ យុទ្ធសាស្រ្តស្វែងយល់ពីចិត្តសាស្ត្រ និងតម្រូវការអតិថិជន", info: "រយៈពេល៖ ៣៥ នាទី | Slide PPT", video: "https://www.youtube.com/embed/2cEBAltju50?si=KOF2gB53ewFRkwO_", file: "documents/writer-lesson1.pdf" },
+                    { title: "មេរៀនទី ២៖ តិចនិកសរសេរចំណងជើងអត្ថបទ (Hook) ទាក់ទាញចិត្ត", info: "រយៈពេល៖ ៤៥ នាទី | សៀវភៅ PDF", video: "https://www.youtube.com/embed/4ZNzUuKCOVs?si=pGAiH0l2rIarWrzu", file: "documents/writer-lesson2.pdf" }
+                ]
+            },
+            uiux: {
+                title: "វគ្គសិក្សា៖ UX/UI Design",
+                tag: "Design",
+                colorClass: "bg-yellow-50 text-yellow-700",
+                lessons: [
+                    { title: "មេរៀនទី ១៖ អ្វីទៅជា UI និង UX? ស្វែងយល់ពីច្បាប់ចម្លង Design", info: "រយៈពេល៖ ៣០ នាទី | Slide PPT", video: "https://www.youtube.com/embed/OrbfembrR7c?si=1Hl8sdsCmp5n8MQn", file: "documents/uiux-lesson1.pdf" },
+                    { title: "មេរៀនទី ២៖ គូរ Wireframe និងបង្កើតប្រូតូថាយ (Prototype) ក្នុង Figma", info: "រយៈពេល៖ ៥៥ នាទី | Figma Link", video: "https://www.youtube.com/embed/IHuX6xVOMzI?si=pK37am-EMpGKBS_h", file: "https://www.figma.com" }
+                ]
+            },
+            poster: {
+                title: "វគ្គសិក្សា៖ Poster Design",
+                tag: "Graphic Design",
+                colorClass: "bg-green-50 text-green-600",
+                lessons: [
+                    { title: "មេរៀនទី ១៖ ទ្រឹស្តីពណ៌ និងការរៀបចំសមាសធាតុរូបភាព (Composition)", info: "រយៈពេល៖ ៤០ នាទី | Slide PPT", video: "https://www.youtube.com/embed/sIDd2gMEAAQ?si=PI4S8zfFTJVV8wzX", file: "documents/poster-lesson1.pdf" },
+                    { title: "មេរៀនទី ២៖ ការបង្កើត Poster ផ្សព្វផ្សាយផលិតផល និង Social Media", info: "រយៈពេល៖ ៥០ នាទី | ហ្វាយល៍ Raw", video: "https://www.youtube.com/embed/uLPJrpaduFI?si=dHiu36slLPoARJEn", file: "documents/poster-lesson2.zip" }
+                ]
+            }
+        };
+
+        // ២. ទាញយកអត្តសញ្ញាណមុខវិជ្ជាពី URL (Query Parameter)
+        const urlParams = new URLSearchParams(window.location.search);
+        const currentCourseKey = urlParams.get('course') || 'leader';
+
+        const activeCourse = coursesDatabase[currentCourseKey] || coursesDatabase['leader'];
+
+        // ៣. បោះទិន្នន័យ (ចំណងជើង និងស្លាក) ទៅកាន់ HTML Elements
+        document.title = activeCourse.title + " - BizCreate Academy";
+        document.getElementById('course-title').innerText = activeCourse.title;
+        
+        const tagElement = document.getElementById('course-tag');
+        tagElement.innerText = activeCourse.tag;
+        tagElement.className = `${activeCourse.colorClass} text-xs font-bold px-3 py-1 rounded-md uppercase`;
+
+        // ៤. ដំណើរការ Loop បង្ហាញបញ្ជីមេរៀន ព្រមទាំងដាក់លីងដោនឡូត
+        const lessonsListContainer = document.getElementById('lessons-list');
+        lessonsListContainer.innerHTML = "";
+
+        activeCourse.lessons.forEach((lesson, index) => {
+            lessonsListContainer.innerHTML += `
+                <div class="bg-white rounded-xl border border-gray-200 p-5 shadow-sm hover:border-blue-300 transition">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                        <div>
+                            <h4 class="font-bold text-gray-800">${lesson.title}</h4>
+                            <p class="text-xs text-gray-400 mt-1"><i class="fa-regular fa-file-pdf mr-1"></i> ${lesson.info}</p>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <button onclick="changeVideo('${lesson.video}')" class="bg-blue-50 text-blue-600 font-bold text-xs px-3 py-2 rounded-lg hover:bg-blue-100 transition flex items-center gap-1">
+                                <i class="fa-solid fa-play text-[10px]"></i> មើលវីដេអូ
+                            </button>
+                            
+                            <a href="${lesson.file || '#'}" download target="_blank" class="bg-gray-100 text-gray-700 font-bold text-xs px-3 py-2 rounded-lg hover:bg-gray-200 transition flex items-center gap-1">
+                                <i class="fa-solid fa-download text-[10px]"></i> ទាញយក
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            `;
+        });
+
+        // ៥. ចាក់វីដេអូមេរៀនទី ១ ជាលំនាំដើមភ្លាមៗពេលទំព័រដោនឡូតចប់
+        if(activeCourse.lessons.length > 0) {
+            document.getElementById('video-player').src = activeCourse.lessons[0].video;
+        }
+
+        // ៦. មុខងារផ្លាស់ប្តូរវីដេអូក្នុង Iframe
+        function changeVideo(videoUrl) {
+            document.getElementById('video-player').src = videoUrl;
+        }
+
+        // ៧. ប្រព័ន្ធ Mobile Menu Toggle សម្រាប់អេក្រង់ទូរស័ព្ទ
+        const detailBtn = document.getElementById('detail-menu-btn');
+        const detailMenu = document.getElementById('detail-mobile-menu');
+        const detailIcon = document.getElementById('detail-menu-icon');
+
+        detailBtn.addEventListener('click', () => {
+            detailMenu.classList.toggle('hidden');
+            if (detailMenu.classList.contains('hidden')) {
+                detailIcon.setAttribute('d', 'M4 6h16M4 12h16m-7 6h7');
+            } else {
+                detailIcon.setAttribute('d', 'M6 18L18 6M6 6l12 12');
+            }
+        });
+    </script>
+</body>
+</html>

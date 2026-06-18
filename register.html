@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BizCreate Student Management</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@400;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+        }
+    </script>
+    <style>
+        body { font-family: 'Kantumruy Pro', sans-serif; transition: background-color 0.3s; }
+        .row-entry { animation: slideIn 0.3s ease-out; }
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateX(-10px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        /* កែសម្រួល scrollbar ឱ្យស្អាតសម្រាប់ទូរសព្ទ */
+        ::-webkit-scrollbar { width: 5px; height: 5px; }
+        ::-webkit-scrollbar-thumb { background: #3b82f6; border-radius: 10px; }
+    </style>
+</head>
+<body class="bg-slate-100 dark:bg-slate-900 p-0 text-slate-800 dark:text-slate-200 min-h-screen">
+
+    <nav class="bg-blue-700 dark:bg-slate-800 p-4 shadow-lg sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <h1 class="text-white font-bold text-lg md:text-xl">BizCreate</h1>
+                <div class="flex space-x-1 border-l border-blue-500 pl-3">
+                    <a href="index.html" class="text-white hover:bg-blue-600 px-2 py-1 rounded-lg text-xs md:text-sm transition">Back</a>
+                </div>
+            </div>
+            
+            <div class="flex items-center space-x-2">
+                <button onclick="toggleDarkMode()" class="p-2 bg-blue-800 dark:bg-slate-700 rounded-full text-white">
+                    <span id="darkIcon" class="text-sm">🌙</span>
+                    <span id="lightIcon" class="hidden text-sm">☀️</span>
+                </button>
+                <a href="login.html" class="bg-white text-blue-700 px-3 py-1.5 rounded-lg text-xs font-bold hover:bg-gray-100">Login</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="max-w-6xl mx-auto px-4 py-6 grid grid-cols-1 lg:grid-cols-3 gap-6 pb-20">
+        
+        <div class="lg:col-span-1">
+            <div class="bg-white dark:bg-slate-800 shadow-xl rounded-2xl border border-blue-100 dark:border-slate-700">
+                <div class="bg-blue-600 dark:bg-blue-700 p-4 rounded-t-2xl text-white text-center md:text-left">
+                    <h2 class="text-lg font-bold">ចុះឈ្មោះសិស្សថ្មី</h2>
+                    <p class="text-[10px] md:text-xs opacity-80">កំណត់ត្រឹមតែ ១០ នាក់ប៉ុណ្ណោះ</p>
+                </div>
+                <div class="p-5 space-y-4">
+                    <div>
+                        <label class="block text-sm font-semibold mb-1">ឈ្មោះពេញ</label>
+                        <input type="text" id="fullName" placeholder="ឧ. សុខ ជា" class="w-full p-3 text-sm border dark:border-slate-600 dark:bg-slate-700 rounded-xl focus:ring-2 focus:ring-blue-400 outline-none transition">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold mb-1">លេខទូរស័ព្ទ</label>
+                        <input type="text" id="phone" placeholder="067XXXXXX" class="w-full p-3 text-sm border dark:border-slate-600 dark:bg-slate-700 rounded-xl focus:ring-2 focus:ring-blue-400 outline-none transition">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold mb-1">ជ្រើសរើសវគ្គសិក្សា</label>
+                        <select id="course" class="w-full p-3 text-sm border dark:border-slate-600 dark:bg-slate-700 rounded-xl bg-white focus:ring-2 focus:ring-blue-400 outline-none cursor-pointer">
+                            <option>Leader / Developer</option>
+                            <option>Front-end Designer</option>
+                            <option>Content Writer</option>
+                            <option>UX/UI Design</option>
+                            <option>Poster Design</option>
+                        </select>
+                    </div>
+                    <button onclick="saveData()" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 rounded-xl transition-all active:scale-95 shadow-lg">
+                        រក្សាទុកទិន្នន័យ
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="lg:col-span-2">
+            <div class="bg-white dark:bg-slate-800 shadow-xl rounded-2xl border border-gray-100 dark:border-slate-700 overflow-hidden">
+                <div class="bg-slate-800 dark:bg-slate-950 p-4 text-white flex justify-between items-center">
+                    <h2 class="font-bold text-sm md:text-base">បញ្ជីឈ្មោះដែលបានរក្សាទុក</h2>
+                    <div id="status" class="text-[10px] md:text-sm bg-blue-500/20 px-3 py-1 rounded-full border border-blue-400">សរុប៖ 0/10</div>
+                </div>
+                
+                <div class="overflow-x-auto w-full">
+                    <table class="w-full text-left border-collapse min-w-[500px]">
+                        <thead class="bg-slate-50 dark:bg-slate-900/50 border-b dark:border-slate-700">
+                            <tr class="text-[10px] md:text-sm">
+                                <th class="p-3 font-bold text-slate-500 uppercase">ល.រ</th>
+                                <th class="p-3 font-bold text-slate-500 uppercase">ឈ្មោះសិស្ស</th>
+                                <th class="p-3 font-bold text-slate-500 uppercase">លេខទូរស័ព្ទ</th>
+                                <th class="p-3 font-bold text-slate-500 uppercase">វគ្គសិក្សា</th>
+                                <th class="p-3 font-bold text-slate-500 uppercase text-center">សកម្មភាព</th>
+                            </tr>
+                        </thead>
+                        <tbody id="dataTable" class="text-xs md:text-sm"></tbody>
+                    </table>
+                </div>
+
+                <div id="empty" class="p-12 text-center flex flex-col items-center justify-center space-y-2">
+                    <div class="w-12 h-12 bg-slate-100 dark:bg-slate-700 rounded-full flex items-center justify-center text-slate-300 dark:text-slate-500 text-xl">📁</div>
+                    <p class="text-slate-400 text-sm">មិនទាន់មានសិស្សក្នុងបញ្ជីទេ</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        let count = 0;
+        const max = 10;
+
+        function toggleDarkMode() {
+            document.documentElement.classList.toggle('dark');
+            const isDark = document.documentElement.classList.contains('dark');
+            document.getElementById('darkIcon').classList.toggle('hidden', isDark);
+            document.getElementById('lightIcon').classList.toggle('hidden', !isDark);
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        }
+
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.classList.add('dark');
+            document.getElementById('darkIcon').classList.add('hidden');
+            document.getElementById('lightIcon').classList.remove('hidden');
+        }
+
+        function saveData() {
+            const name = document.getElementById('fullName').value;
+            const phone = document.getElementById('phone').value;
+            const course = document.getElementById('course').value;
+
+            if(!name || !phone) {
+                alert("សូមមេត្តាបំពេញឈ្មោះ និងលេខទូរស័ព្ទ!");
+                return;
+            }
+
+            if(count >= max) {
+                alert("បញ្ជីនេះអាចផ្ទុកបានត្រឹមតែ " + max + " នាក់ប៉ុណ្ណោះ!");
+                return;
+            }
+
+            count++;
+            document.getElementById('empty').classList.add('hidden');
+            
+            const tbody = document.getElementById('dataTable');
+            const row = document.createElement('tr');
+            row.className = "border-b dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-700/50 row-entry transition";
+            row.id = "student-" + Date.now(); // ប្រើ timestamp ដើម្បីកុំឱ្យជាន់ ID គ្នាពេលលុប
+            row.innerHTML = `
+                <td class="p-3 text-slate-500 font-mono">${count}</td>
+                <td class="p-3 font-bold text-blue-700 dark:text-blue-400">${name}</td>
+                <td class="p-3 font-mono">${phone}</td>
+                <td class="p-3"><span class="bg-blue-100 dark:bg-blue-900/50 text-blue-600 dark:text-blue-300 px-2 py-1 rounded-full text-[10px] font-semibold">${course}</span></td>
+                <td class="p-3 text-center">
+                    <button onclick="removeRow('${row.id}')" class="text-red-400 hover:text-red-600 transition text-[10px] font-bold">លុប</button>
+                </td>
+            `;
+            tbody.appendChild(row);
+
+            document.getElementById('fullName').value = '';
+            document.getElementById('phone').value = '';
+            updateStatus();
+        }
+
+        function removeRow(id) {
+            document.getElementById(id).remove();
+            count--;
+            updateStatus();
+            if(count === 0) document.getElementById('empty').classList.remove('hidden');
+            
+            // កែសម្រួល ល.រ ឡើងវិញឱ្យត្រឹមត្រូវ
+            const rows = document.querySelectorAll('#dataTable tr');
+            rows.forEach((r, index) => {
+                r.cells[0].innerText = index + 1;
+            });
+        }
+
+        function updateStatus() {
+            document.getElementById('status').innerText = `សរុប៖ ${count}/${max}`;
+        }
+    </script>
+</body>
+</html>

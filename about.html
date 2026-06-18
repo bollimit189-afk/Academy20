@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - BizCreate</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        body { font-family: 'Kantumruy Pro', sans-serif; }
+    </style>
+</head>
+<body class="bg-gray-50 flex flex-col min-h-screen">
+
+    <nav class="bg-blue-900 text-white p-4 sticky top-0 z-50 shadow-md">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-xl font-bold font-mono tracking-wider text-yellow-400">BizCreate</h1>
+            
+            <div class="hidden lg:flex items-center space-x-6">
+                <a href="index.html" class="flex items-center gap-2 text-gray-300 hover:text-yellow-400 transition font-medium">
+                    <i class="fa-solid fa-house text-xs"></i> ទំព័រដើម
+                </a>
+                <a href="about.html" class="flex items-center gap-2 text-yellow-400 font-medium border-b-2 border-yellow-400 pb-1">
+                    <i class="fa-solid fa-circle-info text-xs"></i> អំពីយើង
+                </a>
+                <a href="courses.html" class="flex items-center gap-2 text-gray-300 hover:text-yellow-400 transition font-medium">
+                    <i class="fa-solid fa-graduation-cap text-xs"></i> វគ្គសិក្សា
+                </a>
+                <a href="team.html" class="flex items-center gap-2 text-gray-300 hover:text-yellow-400 transition font-medium">
+                    <i class="fa-solid fa-users text-xs"></i> ក្រុមការងារ
+                </a>
+                <a href="lessons.html" class="flex items-center gap-2 text-gray-300 hover:text-yellow-400 transition font-medium">
+                    <i class="fa-solid fa-book-open text-xs"></i> មេរៀន
+                </a>
+                <a href="register.html" class="flex items-center gap-2 bg-yellow-500 text-blue-900 px-6 py-2 rounded-full font-bold hover:bg-yellow-400 transition shadow-lg">
+                    <i class="fa-solid fa-user-plus text-xs"></i> ចុះឈ្មោះសិក្សា
+                </a>
+            </div>
+
+            <button id="menu-btn" class="lg:hidden text-white focus:outline-none">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden lg:hidden flex flex-col space-y-4 px-4 pt-4 pb-6 border-t border-blue-800 mt-4 bg-blue-900">
+            <a href="index.html" class="flex items-center gap-3 text-gray-300 py-1">
+                <i class="fa-solid fa-house w-5 text-center"></i> ទំព័រដើម
+            </a>
+            <a href="about.html" class="flex items-center gap-3 text-gray-300 py-1">
+                <i class="fa-solid fa-circle-info w-5 text-center"></i> អំពីយើង
+            </a>
+            <a href="courses.html" class="flex items-center gap-3 text-yellow-400 py-1">
+                <i class="fa-solid fa-graduation-cap w-5 text-center"></i> វគ្គសិក្សា
+            </a>
+            <a href="team.html" class="flex items-center gap-3 text-gray-300 py-1">
+                <i class="fa-solid fa-users w-5 text-center"></i> ក្រុមការងារ
+            </a>
+            <a href="lessons.html" class="flex items-center gap-3 text-gray-300 py-1">
+                <i class="fa-solid fa-book-open w-5 text-center"></i> មេរៀន
+            </a>
+            <a href="register.html" class="flex items-center justify-center gap-2 bg-yellow-500 text-blue-900 text-center py-2.5 rounded-lg font-bold">
+                <i class="fa-solid fa-user-plus"></i> ចុះឈ្មោះសិក្សា
+            </a>
+        </div>
+    </nav>
+
+    <main class="container mx-auto py-10 md:py-16 px-4 flex-grow">
+        
+        <div class="text-center max-w-3xl mx-auto mb-12 md:mb-16">
+            <h2 class="text-2xl md:text-4xl font-bold text-blue-900 mb-4 italic">ចក្ខុវិស័យរបស់យើង</h2>
+            <p class="text-gray-700 text-sm md:text-lg leading-relaxed px-2">
+                យើងជឿជាក់លើការចែករំលែកចំណេះដឹងដើម្បីបង្កើតសហគ្រិនថ្មីៗ។ BizCreate Academy ត្រូវបានបង្កើតឡើងក្នុងគោលបំណងលើកកម្ពស់ការយល់ដឹង និងពង្រឹងសមត្ថភាពយុវជនកម្ពុជាលើផ្នែកបច្ចេកវិទ្យា និងការធ្វើអាជីវកម្មបែបឌីជីថល។
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-start mb-16">
+            <div class="space-y-4 order-2 lg:order-1">
+                <h3 class="text-xl md:text-2xl font-bold text-blue-900 border-l-4 border-blue-600 pl-4">រឿងរ៉ាវរបស់ពួកយើង</h3>
+                <p class="text-gray-600 text-sm md:text-base leading-relaxed">
+                    ពួកយើងគឺជាក្រុមនិស្សិតឆ្នាំទី ២ ជំនាញព័ត៌មានវិទ្យា ដែលមើលឃើញពីឱកាស និងបញ្ហាប្រឈមក្នុងការរៀនសូត្រនាសម័យកាលបច្ចេកវិទ្យានេះ។ យើងបានរួមគ្នាបង្កើត BizCreate នេះឡើង ដើម្បីជាស្ពានចម្លង និងជាកន្លែងដែលអ្នករាល់គ្នាអាចស្វែងរកធនធានសិក្សាដែលមានគុណភាព និងងាយស្រួលយល់។
+                </p>
+                <p class="text-gray-600 text-sm md:text-base leading-relaxed">
+                    ទោះបីជាពួកយើងនៅជាយុវជនដែលកំពុងសិក្សាក៏ដោយ ប៉ុន្តែឆន្ទៈ និងការប្តេជ្ញាចិត្តរបស់យើងគឺធំធេងក្នុងការរួមចំណែកអភិវឌ្ឍធនធានមនុស្សនៅក្នុងប្រទេសកម្ពុជា។
+                </p>
+            </div>
+
+            <div class="bg-white p-6 md:p-8 rounded-2xl shadow-xl border border-gray-100 order-1 lg:order-2">
+                <h3 class="text-xl md:text-2xl font-bold text-blue-900 mb-6 flex items-center gap-2">
+                    <span class="p-2 bg-blue-100 rounded-lg">🚀</span> អ្វីដែលយើងផ្តល់ជូន
+                </h3>
+                <ul class="space-y-4 text-gray-600 text-sm md:text-base">
+                    <li class="flex items-start gap-3">
+                        <span class="text-green-500 font-bold mt-1">✓</span> 
+                        <span>មេរៀនដែលផ្តោតលើការអនុវត្តផ្ទាល់</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="text-green-500 font-bold mt-1">✓</span> 
+                        <span>ការចែករំលែកបទពិសោធន៍រវាងសិស្ស និងសិស្ស</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="text-green-500 font-bold mt-1">✓</span> 
+                        <span>គម្រោងពិតៗដើម្បីពង្រឹងសមត្ថភាពការងារ</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="text-green-500 font-bold mt-1">✓</span> 
+                        <span>សហគមន៍សម្រាប់ពិភាក្សា និងដោះស្រាយបញ្ហា</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="text-center mb-8">
+            <h3 class="text-xl md:text-2xl font-bold text-blue-900 mb-8 uppercase tracking-wide">តម្លៃស្នូលរបស់យើង</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-white p-8 rounded-2xl shadow-md border hover:border-blue-400 hover:shadow-lg transition duration-300 group">
+                    <div class="text-blue-900 text-4xl mb-3 font-black opacity-20 group-hover:opacity-100 transition">០១</div>
+                    <h4 class="font-bold text-lg mb-2 text-blue-900">ការច្នៃប្រឌិត</h4>
+                    <p class="text-gray-500 text-sm leading-relaxed italic">"យើងលើកកម្ពស់ការគិតបែបថ្មីនិងការបង្កើតដំណោះស្រាយប្លែកៗ។"</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-md border hover:border-blue-400 hover:shadow-lg transition duration-300 group">
+                    <div class="text-blue-900 text-4xl mb-3 font-black opacity-20 group-hover:opacity-100 transition">០២</div>
+                    <h4 class="font-bold text-lg mb-2 text-blue-900">សហការ</h4>
+                    <p class="text-gray-500 text-sm leading-relaxed italic">"ការធ្វើការជាក្រុម និងការចែករំលែកចំណេះដឹងគឺជាកម្លាំងរបស់យើង。"</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-md border hover:border-blue-400 hover:shadow-lg transition duration-300 group sm:col-span-2 lg:col-span-1">
+                    <div class="text-blue-900 text-4xl mb-3 font-black opacity-20 group-hover:opacity-100 transition">០៣</div>
+                    <h4 class="font-bold text-lg mb-2 text-blue-900">ការប្តេជ្ញា</h4>
+                    <p class="text-gray-500 text-sm leading-relaxed italic">"យើងប្រកាន់ខ្ជាប់នូវការផ្តល់ចំណេះដឹងដែលល្អបំផុតដល់អ្នកសិក្សា។"</p>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="bg-blue-900 text-white py-8 text-center mt-auto">
+        <p class="text-xs md:text-sm opacity-70">© 2026 BizCreate Academy - កិច្ចការសាលាសម្រាប់ក្រុមទី ៦</p>
+    </footer>
+
+    <script>
+        const btn = document.getElementById('menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        const icon = document.getElementById('menu-icon');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+            if (menu.classList.contains('hidden')) {
+                icon.setAttribute('d', 'M4 6h16M4 12h16m-7 6h7');
+            } else {
+                icon.setAttribute('d', 'M6 18L18 6M6 6l12 12');
+            }
+        });
+    </script>
+</body>
+</html>

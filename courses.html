@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>វគ្គសិក្សា - BizCreate Academy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Kantumruy Pro', sans-serif; }
+    </style>
+</head>
+<body class="bg-gray-50 flex flex-col min-h-screen">
+
+    <nav class="bg-blue-900 text-white p-4 sticky top-0 z-50 shadow-md">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-xl font-bold font-mono tracking-wider text-yellow-400">BizCreate</h1>
+            
+            <div class="hidden lg:flex items-center space-x-6">
+                <a href="index.html" class="flex items-center gap-2 text-gray-300 hover:text-yellow-400 transition font-medium">
+                    <i class="fa-solid fa-house text-xs"></i> ទំព័រដើម
+                </a>
+                <a href="about.html" class="flex items-center gap-2 text-gray-300 hover:text-yellow-400 transition font-medium">
+                    <i class="fa-solid fa-circle-info text-xs"></i> អំពីយើង
+                </a>
+                <a href="courses.html" class="flex items-center gap-2 text-yellow-400 font-medium border-b-2 border-yellow-400 pb-1">
+                    <i class="fa-solid fa-graduation-cap text-xs"></i> វគ្គសិក្សា
+                </a>
+                <a href="team.html" class="flex items-center gap-2 text-gray-300 hover:text-yellow-400 transition font-medium">
+                    <i class="fa-solid fa-users text-xs"></i> ក្រុមការងារ
+                </a>
+                <a href="lessons.html" class="flex items-center gap-2 text-gray-300 hover:text-yellow-400 transition font-medium">
+                    <i class="fa-solid fa-book-open text-xs"></i> មេរៀន
+                </a>
+                <a href="register.html" class="flex items-center gap-2 bg-yellow-500 text-blue-900 px-6 py-2 rounded-full font-bold hover:bg-yellow-400 transition shadow-lg">
+                    <i class="fa-solid fa-user-plus text-xs"></i> ចុះឈ្មោះសិក្សា
+                </a>
+            </div>
+
+            <button id="menu-btn" class="lg:hidden text-white focus:outline-none">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden lg:hidden flex flex-col space-y-4 px-4 pt-4 pb-6 border-t border-blue-800 mt-4 bg-blue-900">
+            <a href="index.html" class="flex items-center gap-3 text-gray-300 py-1">
+                <i class="fa-solid fa-house w-5 text-center"></i> ទំព័រដើម
+            </a>
+            <a href="about.html" class="flex items-center gap-3 text-gray-300 py-1">
+                <i class="fa-solid fa-circle-info w-5 text-center"></i> អំពីយើង
+            </a>
+            <a href="courses.html" class="flex items-center gap-3 text-yellow-400 py-1">
+                <i class="fa-solid fa-graduation-cap w-5 text-center"></i> វគ្គសិក្សា
+            </a>
+            <a href="team.html" class="flex items-center gap-3 text-gray-300 py-1">
+                <i class="fa-solid fa-users w-5 text-center"></i> ក្រុមការងារ
+            </a>
+            <a href="lessons.html" class="flex items-center gap-3 text-gray-300 py-1">
+                <i class="fa-solid fa-book-open w-5 text-center"></i> មេរៀន
+            </a>
+            <a href="register.html" class="flex items-center justify-center gap-2 bg-yellow-500 text-blue-900 text-center py-2.5 rounded-lg font-bold">
+                <i class="fa-solid fa-user-plus"></i> ចុះឈ្មោះសិក្សា
+            </a>
+        </div>
+    </nav>
+
+    <main class="container mx-auto py-10 md:py-16 px-4 flex-grow">
+        <div class="text-center mb-16">
+            <span class="bg-blue-100 text-blue-800 text-xs px-4 py-1.5 rounded-full font-semibold uppercase tracking-wider">Premium Courses</span>
+            <h2 class="text-3xl md:text-5xl font-bold text-blue-900 mt-4 mb-4">វគ្គសិក្សាជំនាញរបស់យើង</h2>
+            <p class="text-gray-500 max-w-2xl mx-auto text-sm md:text-base leading-relaxed">ជ្រើសរើសវគ្គសិក្សាដែលស័ក្តិសមសម្រាប់អ្នក ដើម្បីពង្រឹងសមត្ថភាពលើផ្នែកបច្ចេកវិទ្យា ឌីជីថលម៉ាឃីតធីង និងការរចនាជាមួយក្រុមការងារ BizCreate Academy។</p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
+            
+            <a href="course-detail.html?course=leader" class="bg-white rounded-2xl shadow-sm overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-xl flex flex-col border border-gray-200 relative group cursor-pointer">
+                <span class="absolute top-3 left-3 bg-red-500 text-white text-[10px] font-bold px-2.5 py-1 rounded-lg z-10 shadow-sm">-80% Off</span>
+                <div class="h-36 bg-gradient-to-br from-red-500 to-red-700 flex flex-col items-center justify-center text-white relative p-4 text-center">
+                    <div class="text-2xl opacity-20 absolute right-4 top-4 font-mono select-none">01</div>
+                    <h4 class="text-xl font-black font-mono tracking-wider">DEV + LEAD</h4>
+                </div>
+                <div class="p-5 flex-grow flex flex-col">
+                    <span class="bg-red-50 text-red-600 text-[10px] font-bold px-2.5 py-1 rounded-md uppercase self-start mb-3">Technical Lead</span>
+                    <h3 class="text-base font-bold mb-1.5 text-gray-800 group-hover:text-blue-900 transition">Leader / Developer</h3>
+                    <p class="text-gray-500 text-xs mb-4 flex-grow leading-relaxed">រៀនពីរបៀបគ្រប់គ្រងក្រុមការងារ និងការអភិវឌ្ឍប្រព័ន្ធដោយប្រើប្រាស់ <span class="text-red-500 font-semibold">ReactJS</span> និង <span class="text-red-500 font-semibold">NodeJS</span>។</p>
+                    <div class="flex items-center space-x-3 text-[11px] text-gray-400 mb-4 border-t border-b border-gray-50 py-2">
+                        <span><i class="fa-regular fa-file-video mr-1 text-red-400"></i>24 មេរៀន</span>
+                        <span><i class="fa-regular fa-clock mr-1 text-red-400"></i>12 ម៉ោង</span>
+                    </div>
+                    <div class="flex justify-between items-center mt-auto">
+                        <div class="flex flex-col">
+                            <span class="text-blue-900 font-black text-base">$10.00</span>
+                            <span class="text-gray-400 line-through text-[10px]">$50.00</span>
+                        </div>
+                        <span class="bg-blue-900 text-yellow-400 px-3 py-1.5 rounded-lg text-[11px] font-bold group-hover:bg-blue-800 transition shadow-sm">មើលមេរៀន</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="course-detail.html?course=frontend" class="bg-white rounded-2xl shadow-sm overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-xl flex flex-col border border-gray-200 relative group cursor-pointer">
+                <span class="absolute top-3 left-3 bg-red-500 text-white text-[10px] font-bold px-2.5 py-1 rounded-lg z-10 shadow-sm">-60% Off</span>
+                <div class="h-36 bg-gradient-to-br from-blue-500 to-blue-700 flex flex-col items-center justify-center text-white relative p-4 text-center">
+                    <div class="text-2xl opacity-20 absolute right-4 top-4 font-mono select-none">02</div>
+                    <h4 class="text-xl font-black font-mono tracking-wider">FRONT-END</h4>
+                </div>
+                <div class="p-5 flex-grow flex flex-col">
+                    <span class="bg-blue-50 text-blue-600 text-[10px] font-bold px-2.5 py-1 rounded-md uppercase self-start mb-3">Web Design</span>
+                    <h3 class="text-base font-bold mb-1.5 text-gray-800 group-hover:text-blue-900 transition">Front-end Designer</h3>
+                    <p class="text-gray-500 text-xs mb-4 flex-grow leading-relaxed">រៀនបង្កើតគេហទំព័រដែលមានភាពទាក់ទាញជាមួយ <span class="text-blue-500 font-semibold">HTML</span>, <span class="text-blue-500 font-semibold">CSS</span>, និង <span class="text-blue-500 font-semibold">Tailwind</span>។</p>
+                    <div class="flex items-center space-x-3 text-[11px] text-gray-400 mb-4 border-t border-b border-gray-50 py-2">
+                        <span><i class="fa-regular fa-file-video mr-1 text-blue-400"></i>18 មេរៀន</span>
+                        <span><i class="fa-regular fa-clock mr-1 text-blue-400"></i>10 ម៉ោង</span>
+                    </div>
+                    <div class="flex justify-between items-center mt-auto">
+                        <div class="flex flex-col">
+                            <span class="text-blue-900 font-black text-base">$10.00</span>
+                            <span class="text-gray-400 line-through text-[10px]">$25.00</span>
+                        </div>
+                        <span class="bg-blue-900 text-yellow-400 px-3 py-1.5 rounded-lg text-[11px] font-bold group-hover:bg-blue-800 transition shadow-sm">មើលមេរៀន</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="course-detail.html?course=writer" class="bg-white rounded-2xl shadow-sm overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-xl flex flex-col border border-gray-200 relative group cursor-pointer">
+                <span class="absolute top-3 left-3 bg-red-500 text-white text-[10px] font-bold px-2.5 py-1 rounded-lg z-10 shadow-sm">-50% Off</span>
+                <div class="h-36 bg-gradient-to-br from-purple-500 to-purple-700 flex flex-col items-center justify-center text-white relative p-4 text-center">
+                    <div class="text-2xl opacity-20 absolute right-4 top-4 font-mono select-none">03</div>
+                    <h4 class="text-xl font-black font-mono tracking-wider">WRITING</h4>
+                </div>
+                <div class="p-5 flex-grow flex flex-col">
+                    <span class="bg-purple-50 text-purple-600 text-[10px] font-bold px-2.5 py-1 rounded-md uppercase self-start mb-3">Marketing</span>
+                    <h3 class="text-base font-bold mb-1.5 text-gray-800 group-hover:text-blue-900 transition">Content Writer</h3>
+                    <p class="text-gray-500 text-xs mb-4 flex-grow leading-relaxed">រៀនពីរបៀបសរសេរអត្ថបទឱ្យមានភាពទាក់ទាញ ដើម្បីផ្សព្វផ្សាយអាជីវកម្មបែប <span class="text-purple-500 font-semibold">ឌីជីថល</span>។</p>
+                    <div class="flex items-center space-x-3 text-[11px] text-gray-400 mb-4 border-t border-b border-gray-50 py-2">
+                        <span><i class="fa-regular fa-file-video mr-1 text-purple-400"></i>12 មេរៀន</span>
+                        <span><i class="fa-regular fa-clock mr-1 text-purple-400"></i>6 ម៉ោង</span>
+                    </div>
+                    <div class="flex justify-between items-center mt-auto">
+                        <div class="flex flex-col">
+                            <span class="text-blue-900 font-black text-base">$10.00</span>
+                            <span class="text-gray-400 line-through text-[10px]">$20.00</span>
+                        </div>
+                        <span class="bg-blue-900 text-yellow-400 px-3 py-1.5 rounded-lg text-[11px] font-bold group-hover:bg-blue-800 transition shadow-sm">មើលមេរៀន</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="course-detail.html?course=uiux" class="bg-white rounded-2xl shadow-sm overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-xl flex flex-col border border-gray-200 relative group cursor-pointer">
+                <span class="absolute top-3 left-3 bg-red-500 text-white text-[10px] font-bold px-2.5 py-1 rounded-lg z-10 shadow-sm">-75% Off</span>
+                <div class="h-36 bg-gradient-to-br from-yellow-500 to-yellow-600 flex flex-col items-center justify-center text-white relative p-4 text-center">
+                    <div class="text-2xl opacity-20 absolute right-4 top-4 font-mono select-none">04</div>
+                    <h4 class="text-xl font-black font-mono tracking-wider text-blue-900">UI / UX</h4>
+                </div>
+                <div class="p-5 flex-grow flex flex-col">
+                    <span class="bg-yellow-50 text-yellow-700 text-[10px] font-bold px-2.5 py-1 rounded-md uppercase self-start mb-3">Design</span>
+                    <h3 class="text-base font-bold mb-1.5 text-gray-800 group-hover:text-blue-900 transition">UX/UI Design</h3>
+                    <p class="text-gray-500 text-xs mb-4 flex-grow leading-relaxed">រៀនពីរបៀបរចនា Layout វេបសាយ និង Mobile App ឱ្យមានភាពទាក់ទាញជាមួយ <span class="text-yellow-600 font-semibold">Figma</span> sunsets</p>
+                    <div class="flex items-center space-x-3 text-[11px] text-gray-400 mb-4 border-t border-b border-gray-50 py-2">
+                        <span><i class="fa-regular fa-file-video mr-1 text-yellow-600"></i>16 មេរៀន</span>
+                        <span><i class="fa-regular fa-clock mr-1 text-yellow-600"></i>8 ម៉ោង</span>
+                    </div>
+                    <div class="flex justify-between items-center mt-auto">
+                        <div class="flex flex-col">
+                            <span class="text-blue-900 font-black text-base">$10.00</span>
+                            <span class="text-gray-400 line-through text-[10px]">$40.00</span>
+                        </div>
+                        <span class="bg-blue-900 text-yellow-400 px-3 py-1.5 rounded-lg text-[11px] font-bold group-hover:bg-blue-800 transition shadow-sm">មើលមេរៀន</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="course-detail.html?course=poster" class="bg-white rounded-2xl shadow-sm overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-xl flex flex-col border border-gray-200 relative group cursor-pointer">
+                <span class="absolute top-3 left-3 bg-red-500 text-white text-[10px] font-bold px-2.5 py-1 rounded-lg z-10 shadow-sm">-65% Off</span>
+                <div class="h-36 bg-gradient-to-br from-green-500 to-green-700 flex flex-col items-center justify-center text-white relative p-4 text-center">
+                    <div class="text-2xl opacity-20 absolute right-4 top-4 font-mono select-none">05</div>
+                    <h4 class="text-xl font-black font-mono tracking-wider">POSTER</h4>
+                </div>
+                <div class="p-5 flex-grow flex flex-col">
+                    <span class="bg-green-50 text-green-600 text-[10px] font-bold px-2.5 py-1 rounded-md uppercase self-start mb-3">Graphic</span>
+                    <h3 class="text-base font-bold mb-1.5 text-gray-800 group-hover:text-blue-900 transition">Poster Design</h3>
+                    <p class="text-gray-500 text-xs mb-4 flex-grow leading-relaxed">រចនារូបភាព Poster ផ្សព្វផ្សាយអាជីវកម្ម និងរូបភាព <span class="text-green-500 font-semibold">Social Media</span> ឱ្យទាក់ទាញ។</p>
+                    <div class="flex items-center space-x-3 text-[11px] text-gray-400 mb-4 border-t border-b border-gray-50 py-2">
+                        <span><i class="fa-regular fa-file-video mr-1 text-green-400"></i>14 មេរៀន</span>
+                        <span><i class="fa-regular fa-clock mr-1 text-green-400"></i>7 ម៉ោង</span>
+                    </div>
+                    <div class="flex justify-between items-center mt-auto">
+                        <div class="flex flex-col">
+                            <span class="text-blue-900 font-black text-base">$10.00</span>
+                            <span class="text-gray-400 line-through text-[10px]">$30.00</span>
+                        </div>
+                        <span class="bg-blue-900 text-yellow-400 px-3 py-1.5 rounded-lg text-[11px] font-bold group-hover:bg-blue-800 transition shadow-sm">មើលមេរៀន</span>
+                    </div>
+                </div>
+            </a>
+
+        </div>
+    </main>
+
+    <footer class="bg-blue-900 text-white py-8 text-center mt-auto border-t border-blue-800">
+        <p class="opacity-80 text-xs md:text-sm">© 2026 BizCreate Academy - កិច្ចការសាលាសម្រាប់ក្រុមទី ៦</p>
+    </footer>
+
+    <script>
+        const btn = document.getElementById('menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        const icon = document.getElementById('menu-icon');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+            if (menu.classList.contains('hidden')) {
+                icon.setAttribute('d', 'M4 6h16M4 12h16m-7 6h7');
+            } else {
+                icon.setAttribute('d', 'M6 18L18 6M6 6l12 12');
+            }
+        });
+    </script>
+</body>
+</html>
